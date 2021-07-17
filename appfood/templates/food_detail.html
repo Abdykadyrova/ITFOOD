@@ -1,0 +1,26 @@
+{% extends 'main-layout.html' %}
+
+{% block content %}
+    <div class="food-detail-container">
+        <div class="food-detail-center">
+            <h1> {{food.name}} </h1>
+            <img src="{{food.image.url}}" style="height: 300px;">
+
+            <p>
+                {{food.desc}}
+            </p>
+            <p>
+                <span class="food-sale-price">
+                    {{food.sale_price|floatformat}} сом
+                </span>
+            </p>
+            <div>
+               <a href="/eda/card/add/{{ food.id }}?prev={{ request.path|urlencode }}" 
+               class="btn btn-light font-2x">
+                    <img src="/static/images/basket.png" width="32">
+                    В корзину
+                </a>
+            </div>    
+        </div>
+    </div>        
+{% endblock %}    

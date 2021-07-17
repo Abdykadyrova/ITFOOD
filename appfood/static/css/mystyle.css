@@ -1,0 +1,34 @@
+.food-sale-price {
+    color:rgb(192,8,8);
+    font-weight: bolder;
+}
+
+.dish-caerd-footer {
+    padding:0 !important;
+}
+
+.food-detail-container {
+   display: flex;
+   justify-content: center;
+
+}
+
+.food-detail-center {
+    width: 900px;
+}
+.font-2x {
+    font-size: 1.2rem;
+}
+
+.food-detail-desc {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.footer {
+    margin-top: 100px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
