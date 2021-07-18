@@ -5,6 +5,7 @@
     <div class="container food-card-container">
         {{ foods_count }}
         {{ foods_ids }}
+
         <table class="table table-hover">
             <tr>
                 <td style="width: 10%;">№</td>
@@ -49,6 +50,14 @@
                 {% endfor %}
             </tr>
         </table>
+        <div class=" text-md-end">
+            <h4>
+                Сумма заказа:
+                <span class="food-sale-price">
+                    {{ order_sum }}
+                </span>
+            </h4>
+        </div>            
         {% include 'form_order_add.html'%}
     </div>
 {% endblock %}

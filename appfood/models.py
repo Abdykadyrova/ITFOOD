@@ -69,7 +69,7 @@ class Order(models.Model):
 
 
     def __str__(self):
-        return self.id + ' ->' +self.client_name        
+        return str(self.id) + ' ->' +self.client_name        
 
 
 
@@ -89,9 +89,12 @@ class OrderDescription(models.Model):
         db_column='food_id', 
         on_delete=CASCADE
     )
-    amount = models.IntegerField()
+    food_count = models.IntegerField()
+    sum = models.DecimalField(max_digits=9,decimal_places=4)
     class Meta:
-        db_table = 'orders_description'
+        db_table = 'order_description'
 
 
+    def __str__(self):
+        return str(self.order.id) + '-' +self.order.client_name        
   

@@ -26,6 +26,7 @@
                         value="{{ request.path|urlencode}}" 
                         placeholder="Ваше имя:"
                         name="prev_url"
+                       
                     >
 
                     <input 
@@ -34,6 +35,9 @@
                         placeholder="Ваше имя:"
                         name="client_name"
                         id="client_name"
+                        required
+                        oninvalid="this.CustomeValidity('your name')"
+                        oninput="setCustomeValidity"
                     >
                     <input
                         type="text"
@@ -41,6 +45,10 @@
                         placeholder="Ваше номер:"
                         name="client_phone"
                         id="client_phone"
+                        required
+                        oninvalid="this.CustomeValidity('your phone: ')"
+                        oninput="setCustomeValidity"
+                       
                     >
                     <input 
                         type="text"
@@ -48,6 +56,9 @@
                         placeholder="Ваше адрес:"
                         name="client_address"
                         id="client_address"
+                        required
+                        oninvalid="this.CustomeValidity('your address: ')"
+                        oninput="setCustomValidity('')"
                     >
             </div>
             <div class="modal-footer">
